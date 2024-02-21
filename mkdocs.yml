@@ -1,21 +1,21 @@
-site_name: HPC101-Labs-2023
+site_name: CS61A
 theme:
   name: material
   logo: assets/zjusct.png
   favicon: assets/zjusct.png
 nav:
   - CS61A: CS61A/index.md
-markdown_extensions:
-  - admonition #MkDocs 警告框
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-  - tables
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+# markdown_extensions:
+#   - admonition #MkDocs 警告框
+#   - pymdownx.arithmatex:
+#       generic: true
+#   - pymdownx.highlight:
+#       anchor_linenums: true
+#   - pymdownx.inlinehilite
+#   - pymdownx.snippets
+#   - pymdownx.superfences
+#   - tables
+# extra_javascript:
+#   - javascripts/mathjax.js
+#   - https://polyfill.io/v3/polyfill.min.js?features=es6
+#   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
