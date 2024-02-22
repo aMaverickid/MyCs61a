@@ -20,3 +20,20 @@ assert <statement>, <message>
 
 #### Example: Generating Sounds
 
+## 1.5 Environment Diagram
+
+#### **utilities:**
+
+```python
+myfunc = lambda x:	2 * x + 1
+```
+
+## 1.6 Recursion
+
+## 1.7 Tree Recursion
+
+> involves exploring different choices
+
+## 2 Sequences & Data Abstraction
+
+### utilities:
