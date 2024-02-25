@@ -11,24 +11,24 @@
 ### AVL Trees
 
 > 定义一种相对平衡的树，降低树的高度，加速插入和查找
-
-#### Adelson-Velskii-Landis Trees
-##### Definition
+> 
+#### Definition
 ![alt text](assets/AVL_Definition.png)
-##### Methodology: 
+#### Methodology: 
 1. `trouble maker`  
 2. `trouble finder`
 3. `RR rotation / LL rotation` 单旋
 4. `LR rotation / LR rotation` 双旋
-##### Analysis
+#### Analysis
 ![alt text](assets/AVL_height.png)
 
 ### Splay Trees
 
 > AVL Trees 需要储存 BF，Splay Trees 想在节约 Size 的同时，尽量快
-![alt text](image.png)
+
+![alt text](assets/Splay_def.png)
 ##### Main Idea
-![alt text](image-1.png)
+![alt text](assets/Splay_idea.png)
 
 ### Amortized Analysis
 > 引入Splay Trees时，介绍了 Amortized Analysis
