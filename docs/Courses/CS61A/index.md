@@ -1,4 +1,4 @@
-<!-- # CS61A
+# CS61A
 
 ## 1. 4 Higher-order Functions
 
@@ -36,7 +36,7 @@ myfunc = lambda x:	2 * x + 1
 
 ## 2 Sequences & Data Abstraction
 
-### utilities: -->
+### utilities:
 # Intro
 CS61A 是 UCB 为新生开的一门计算机入门课
 

@@ -7,7 +7,7 @@ nav:
   - Home: "index.md"
   - "课程笔记":
     - CS61A: Courses/CS61A/index.md
-    - ADS： Courses/ADS/index.md
+    - ADS: Courses/ADS/index.md
 markdown_extensions:
   - admonition #MkDocs 警告框
   - pymdownx.arithmatex:
