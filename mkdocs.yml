@@ -6,7 +6,7 @@ theme:
 nav:
   - Home: "index.md"
   - "课程笔记":
-    - CS61A: CS61A/index.md
+    - CS61A: Courses/CS61A/index.md
 markdown_extensions:
   - admonition #MkDocs 警告框
   - pymdownx.arithmatex:
