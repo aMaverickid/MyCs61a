@@ -39,10 +39,15 @@ myfunc = lambda x:	2 * x + 1
 ### utilities: -->
 # Intro
 CS61A 是 UCB 为新生开的一门计算机入门课
+
 我上这门课的过程中，可以真切感觉到课程组爆表的用心程度
+
 老师是 John DeNero
+
 UCB公开的课程网址：[CS 61A](https://inst.eecs.berkeley.edu/~cs61a/su20/#:~:text=CS%2061A%3A%20Structure%20and%20Interpretation%20of%20Computer%20Programs)
+
 >我使用的是2020年的课程网站，但CS61A其实每学期都在更新，想学的可以找比较新的版本
+
 # Week 1
 ## Introduction to the Basics of Python
 ### Lab0
@@ -67,3 +72,6 @@ UCB公开的课程网址：[CS 61A](https://inst.eecs.berkeley.edu/~cs61a/su20/#
 ## Data Abstraction + Dictionaries
 ## Trees
 ## Metable Sequences
+ test sentence:
+ Let’s imagine you order a mushroom and cheese pizza from La Val’s, and that they
+represent your order as a list:
