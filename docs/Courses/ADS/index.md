@@ -6,8 +6,8 @@ ADS, 全称为Advanced Data Structure, 浙江大学计科的专业课之一，�
 
 我的老师是 陈昊
 
-!!! quote 参考资料
-    [IsshikiHugh's Notebook](https://isshikihugh.github.io/notebook/){target="_blank"}
+!!! quote "参考资料"
+    [IsshikiHugh's Notebook](https://isshikihugh.github.io/notebook/)
 
 
 ## Week 1
@@ -49,7 +49,12 @@ ADS, 全称为Advanced Data Structure, 浙江大学计科的专业课之一，�
 3. `RR rotation / LL rotation` 单旋
 4. `LR rotation / LR rotation` 双旋
 
-!!! definition 例子
+!!! definition 图示
+    !!! note "LL | RR"
+        ![alt text](image-1.png)
+    !!! note "LR | RL"
+        ![alt text](image-2.png)
+<!-- !!! definition 例子
     !!! note ""
         === "Frame 1"
             下图为一个 AVL 树：
@@ -84,11 +89,11 @@ ADS, 全称为Advanced Data Structure, 浙江大学计科的专业课之一，�
             B === E
             E === F
             E === NULL
-            ```
-
+            ``` -->
+<!-- 
             我们发现，此时 `8` 的「平衡因子」变成了2，不再符合 AVL 树的要求，而这一切都是 `5` 的插入导致的——于是我们称像这里的 `8` 一样，由于某个点的插入，其「平衡因子」不再符合要求的点，为 Trouble Finder；而像这里的 `5` 一样，导致 Trouble Finder 出现的点，被称之为 Trouble Maker。
 
-    形象地描述这件事就是，在动态插入 `5` 这个过程中，出现了一个 "Trouble"，导致这个树不再是 AVL 树，而 `5` 是这个 "Trouble" 的 "Maker"，`8` 是 "Finder"。
+    形象地描述这件事就是，在动态插入 `5` 这个过程中，出现了一个 "Trouble"，导致这个树不再是 AVL 树，而 `5` 是这个 "Trouble" 的 "Maker"，`8` 是 "Finder"。 -->
 
 ---
 #### Analysis
@@ -113,6 +118,17 @@ ADS, 全称为Advanced Data Structure, 浙江大学计科的专业课之一，�
         - 当情况为 LR / RL 时，进行一次 [LR Rotation 或 RL Rotation](#avl-trees){target="_blank"}，我们称之为 zig-zag；
         - 当情况为 LL / RR 时，进行两次 [Single Rotation](#avl-trees){target="_blank"}，使得 X、P、G 的顺序逆转，像跷跷板一样，我们称之为 zig-zig；
     - 不断对 X 进行 Splay 操作，直到 X 成为根节点；
+
+![alt text](image.png)
+
 ### Amortized Analysis
-> 引入Splay Trees时，介绍了 Amortized Analysis
+> Splay Trees 采用了 Amortized Analysis
+> 对于一个树，我们对其节点进行的操作可能是：**增点、删点、改点、查点**等等，而不同类型的操作开销可能不尽相同。简单的计算其平均值则忽略了这些操作之间互相的影响或者是操作频率的问题，所以我们这里使用**Amortized Analysis**来描述其效率
+
+!!! quote "wiki"
+    [Wiki](https://zh.wikipedia.org/wiki/%E5%B9%B3%E6%91%8A%E5%88%86%E6%9E%90){target = "_blank"}: 在计算机科学中，是用于算法分析中的方法，平摊分析常用于分析数据结构（**动态的数据结构**），在使用平摊分析前须知道数据结构各种操作所可能发生的时间，并计算出最坏情况下的操作情况并加以平均，得到操作的平均耗费时间。平摊分析**只能确保最坏情况性能的每次操作耗费的平均时间**，并不能确认平均情况性能。
+
+
+
+
 
