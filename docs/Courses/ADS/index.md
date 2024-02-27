@@ -122,11 +122,35 @@ ADS, 全称为Advanced Data Structure, 浙江大学计科的专业课之一，�
 ![alt text](image.png)
 
 ### Amortized Analysis
-> Splay Trees 采用了 Amortized Analysis
-> 对于一个树，我们对其节点进行的操作可能是：**增点、删点、改点、查点**等等，而不同类型的操作开销可能不尽相同。简单的计算其平均值则忽略了这些操作之间互相的影响或者是操作频率的问题，所以我们这里使用**Amortized Analysis**来描述其效率
+>对Splay Trees的分析采用了Amortized Analysis
 
 !!! quote "wiki"
-    [Wiki](https://zh.wikipedia.org/wiki/%E5%B9%B3%E6%91%8A%E5%88%86%E6%9E%90){target = "_blank"}: 在计算机科学中，是用于算法分析中的方法，平摊分析常用于分析数据结构（**动态的数据结构**），在使用平摊分析前须知道数据结构各种操作所可能发生的时间，并计算出最坏情况下的操作情况并加以平均，得到操作的平均耗费时间。平摊分析**只能确保最坏情况性能的每次操作耗费的平均时间**，并不能确认平均情况性能。
+    [Wiki](https://zh.wikipedia.org/wiki/%E5%B9%B3%E6%91%8A%E5%88%86%E6%9E%90): 在计算机科学中，是用于算法分析中的方法，平摊分析常用于分析数据结构（**动态的数据结构**），在使用平摊分析前须知道数据结构各种操作所可能发生的时间，并计算出最坏情况下的操作情况并加以平均，得到操作的平均耗费时间。平摊分析**只能确保最坏情况性能的每次操作耗费的平均时间**，并不能确认平均情况性能。
+#### Definition
+![alt text](image-3.png)
+
+#### Methodology
+!!! definition "Amortized Analysis 的三种方法"
+    !!! definition "Aggregate analysis"
+        累积连续 M 次操作的代价，再除以 M
+        $$
+            T_{amortized} = \frac{\sum_i{T_{i}}}{n}
+        $$
+    !!! definition "Accounting method"
+        设 n 次连续操作的 actual cost 是 $c_i$, 找到 $c_i$的平滑上界$\hat{c}_i$ 作为 amortized cost.
+        $$
+            \hat{c}_i = c_i + credit\\
+            \sum_{i=1}^n{\hat{c}_i} = \sum_{i=1}^n{c_i} + CREDIT\\
+            T_{amortized} = \frac{\sum_{i=1}^n{\hat{c}_i}}{n} \leq \frac{\sum_{i=1}^n{c_i}}{n}
+        $$
+
+    !!! definition "Potential method"
+    
+
+
+    
+
+
 
 
 
