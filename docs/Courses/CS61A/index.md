@@ -2,7 +2,7 @@
 ## Intro
 CS61A 是 UCB 为新生开的一门计算机入门课
 
-我上这门课的过程中，可以真切感觉到课程组爆表的用心程度
+上这门课的过程中，真的可以感觉到课程组的用心
 
 老师是 John DeNero
 
@@ -56,7 +56,8 @@ UCB公开的课程网址：[CS 61A](https://inst.eecs.berkeley.edu/~cs61a/su20/#
 
 ### Trees
 
-### Metable Sequences
- test sentence:
- Let’s imagine you order a mushroom and cheese pizza from La Val’s, and that they
-represent your order as a list:
+### Mutable Sequences
+
+## Week 5
+### Mutable Functions
+### Iterators & Generators
