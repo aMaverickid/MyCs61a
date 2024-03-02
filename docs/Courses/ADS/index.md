@@ -115,7 +115,7 @@ ADS, 全称为Advanced Data Structure, 浙江大学计科的专业课之一，�
 - 当我们访问到某个点 X 时：
     - 如果 P 是根节点，则直接进行一次 [Single Rotation](#avl-trees){target="_blank"}(LL 或者 RR Rotation，将 X 转到根节点；
     - 如果 P 不是根节点：
-        - 当情况为 LR / RL 时，进行一次 [LR Rotation 或 RL Rotation](#avl-trees){target="_blank"}，我们称之为 zig-zag；
+        - 当情况为 LR / RL 时，进行一次 [LR Rotation 或 RL Rotation](#avl-trees)，我们称之为 zig-zag；
         - 当情况为 LL / RR 时，进行两次 [Single Rotation](#avl-trees){target="_blank"}，使得 X、P、G 的顺序逆转，像跷跷板一样，我们称之为 zig-zig；
     - 不断对 X 进行 Splay 操作，直到 X 成为根节点；
 

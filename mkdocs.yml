@@ -9,6 +9,7 @@ nav:
     - CS61A: Courses/CS61A/index.md
     - ADS: Courses/ADS/index.md
     - 计组: Courses/Computer_Organization/index.md
+    - DB: Courses/DataBaseSystem/index.md
 markdown_extensions:
   - admonition #MkDocs 警告框
   - pymdownx.arithmatex:
