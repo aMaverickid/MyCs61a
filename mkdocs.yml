@@ -8,8 +8,8 @@ nav:
   - "课程笔记":
     - CS61A: Courses/CS61A/index.md
     - ADS:
-      - "Week1": Courses/CS61A/week1.md
-      - "Week2": Courses/CS61A/week2.md
+      - "Week1": Courses/ADS/week1.md
+      - "Week2": Courses/ADS/week2.md
     - 计组: Courses/Computer_Organization/index.md
     - DB: Courses/DataBaseSystem/index.md
 markdown_extensions:
