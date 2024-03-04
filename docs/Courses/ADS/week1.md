@@ -145,6 +145,9 @@ ADS, 全称为Advanced Data Structure, 浙江大学计科的专业课之一，�
         $$
 
     !!! definition "Potential method"
+        ![alt text](image-4.png)
+        !!! example "example of Splay Trees"
+          
     
 
 

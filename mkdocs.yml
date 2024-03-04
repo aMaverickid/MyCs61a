@@ -6,10 +6,10 @@ theme:
 nav:
   - Home: "index.md"
   - "课程笔记":
-    - CS61A: 
+    - CS61A: Courses/CS61A/index.md
+    - ADS:
       - "Week1": Courses/CS61A/week1.md
       - "Week2": Courses/CS61A/week2.md
-    - ADS: Courses/ADS/index.md
     - 计组: Courses/Computer_Organization/index.md
     - DB: Courses/DataBaseSystem/index.md
 markdown_extensions:
