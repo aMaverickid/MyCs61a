@@ -4,7 +4,7 @@
 ### Red Black Tree
 #### Definition
 !!! quote link
-    OI Wiki: https://oi-wiki.org/ds/rb-tree/
+    OI Wiki: [https://oi-wiki.org/ds/rb-tree/](https://oi-wiki.org/ds/rb-tree/)
 !!! definition "定义"
     ![alt text](image-5.png)
     5条性质要记
@@ -46,11 +46,58 @@
     其中，任何一个情况都可以作为一个初始情况。所以可以数出，到达 finish 的路径中，最多出现 2 次 Rotation（case 2 -> case 3 -> finish）
 ##### Delete
 !!! quote link
-    写不了一点，看 [isshikihugh's notebook](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec02/#%E5%88%A0%E9%99%A4)真的非常好
+    写不了一点，看 [isshikihugh's notebook](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec02/#%E5%88%A0%E9%99%A4)或者 [OI Wiki](https://oi-wiki.org/ds/rbtree/#%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C)都行
 
 ### B+ Tree
 
 #### Definition
 !!! quote link
-    OI Wiki: https://oi-wiki.org/ds/bplus-tree/
-B+ 树是一种用树状形式维护有序数列比较信息的数据结构，其增改操作拥相对于二叉树结构更加稳定的对数时间复杂度，通常用于数据库和操作系统的文件系统中
+    OI Wiki: [https://oi-wiki.org/ds/bplus-tree/](https://oi-wiki.org/ds/bplus-tree/)
+B+ 树是 [B 树](https://oi-wiki.org/ds/b-tree/) 的一个升级，它比 B 树更适合实际应用中操作系统的文件索引和数据库索引。目前现代关系型数据库最广泛的支持索引结构就是 B+ 树。
+
+B+ 树是一种多叉排序树，即每个节点通常有多个孩子。一棵 B+ 树包含根节点、内部节点和叶子节点。根节点可能是一个叶子节点，也可能是一个包含两个或两个以上孩子节点的节点。
+
+B+ 树的特点是能够保持数据稳定有序，其插入与修改拥有较稳定的对数时间复杂度。B+ 树元素自底向上插入，这与二叉树恰好相反。
+
+!!! definition 性质
+    1. 有 n 棵子树的节点中含有 n-1 个关键字（即将区间分为 n 个子区间，每个子区间对应一棵子树）。
+    2. 所有叶子节点中包含了全部关键字的信息，及指向含这些关键字记录的指针，且叶子节点本身依关键字的大小自小而大顺序链接。
+    3. 所有的非叶子节点可以看成是索引部分，节点中仅含有其子树（根节点）中的最大（或最小）关键字。
+    4. 除根节点外，其他所有节点中所含关键字的个数最少有 $\lceil \dfrac{m}{2} \rceil$ (注意：B 树中除根以外的所有非叶子节点至少有 $\lceil \dfrac{m}{2} \rceil $棵子树）。
+    同时，B+ 树为了方便范围查询，叶子节点之间还用指针串联起来。
+
+    !!! example
+        一棵 B+ 树的例子
+        ![alt text](image-12.png)
+
+#### Methodology
+> 插入和删除的方法
+
+##### Find
+从根节点开始，根据关键字的大小，找到对应的子树，直到找到叶子节点
+
+!!!+ note "OI Wiki 上的代码实现"
+    ```cpp
+    T find(V key) {
+    int i = 0;
+    while (i < this.number) {
+        if (key.compareTo((V)this.keys[i]) <= 0) break;
+        i++;
+    }
+    if (this.number == i) return null;
+    return this.childs[i].find(key);
+    }
+##### Insert
+- 若为空树，创建一个叶子节点
+- 针对叶子节点，插入关键字，若超过阈值，分裂，递归转移到父节点（索引节点）进行维护
+- 针对索引节点，若当前节点关键字的个数小于等于 m-1，则插入结束。否则，将这个索引类型节点分裂成两个索引节点，左索引节点包含前 $(m-1)/2$ 个 key，右节点包含 $m-(m-1)/2$ 个 key，将第 $m/2$ 个关键字进位到父节点中，进位到父节点的关键字左孩子指向左节点，进位到父节点的关键字右孩子指向右节点。将当前节点的指针指向父节点，然后重复这一步
+
+!!! note "OI Wiki 上可看代码实现"
+##### Delete
+1. 首先查询到键值所在的叶子节点，删除该叶子节点的数据。
+2. - 如果删除叶子节点之后的数据数量，满足 B+ 树的平衡条件，则直接返回。
+   - 否则，就需要做平衡操作：如果该叶子节点的左右兄弟节点的数据量可以借用，就借用过来满足平衡条件。否则，就与相邻的兄弟节点合并成一个新的子节点了。
+3. 在上面平衡操作中，如果是进行了合并操作，就需要向上修正父节点的指针：删除被合并节点的键值以及指针。
+4. 由于做了删除操作，可能父节点也会不平衡，那么就按照前面的步骤也对父节点进行重新平衡操作，这样一直到某个节点平衡为止。
+
+!!! note "OI Wiki 上可看代码实现"
