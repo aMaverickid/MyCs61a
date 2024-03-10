@@ -133,20 +133,37 @@ ADS, 全称为Advanced Data Structure, 浙江大学计科的专业课之一，�
 !!! definition "Amortized Analysis 的三种方法"
     !!! definition "Aggregate analysis"
         累积连续 M 次操作的代价，再除以 M
+
         $$
             T_{amortized} = \frac{\sum_i{T_{i}}}{n}
         $$
     !!! definition "Accounting method"
         设 n 次连续操作的 actual cost 是 $c_i$, 找到 $c_i$的平滑上界$\hat{c}_i$ 作为 amortized cost.
+
         $$
-            \hat{c}_i = c_i + credit\\
-            \sum_{i=1}^n{\hat{c}_i} = \sum_{i=1}^n{c_i} + CREDIT\\
-            T_{amortized} = \frac{\sum_{i=1}^n{\hat{c}_i}}{n} \leq \frac{\sum_{i=1}^n{c_i}}{n}
+        \begin{align}
+            \hat{c}_i &= c_i + credit_i \\ sum_{i=1}^n{\hat{c}_i} &= \sum_{i=1}^n{c_i} + CREDIT \\
+            T_{amortized} &= \frac{\sum_{i=1}^n{\hat{c}_i}}{n} \leq \frac{\sum_{i=1}^n{c_i}}{n}
+        \end{align}
         $$
 
     !!! definition "Potential method"
         ![alt text](image-4.png)
         !!! example "example of Splay Trees"
+        1. 凭感觉选择合适的势函数 $\Phi$...
+        2. Splay Trees的一次维护中要进行三种不同的操作，分析每种操作的Amortized Cost，合理的放缩选择上界（例如此例中，zig操作只可能出现一次，所以可以保留常数项）
+        ![alt text](image-13.png)
+        3. 综合每步操作的放缩后的结果，得到一次维护的Amortized Cost
+
+            $$
+            \begin{align}
+                \hat{c}_{rotate\ x\ to\ root} &= \hat{c}_{zig} + \sum{\hat{c}_{{zig\ zag}_i} + \sum{\hat{c}_{{zig\ zig}_i}}} \\
+                & \leq 1 + R(T) - R(X) \\
+                & \leq O(\log N)
+            \end{align}  
+            $$
+        
+
           
     
 
