@@ -10,6 +10,7 @@ nav:
     - ADS:
       - "Week1": Courses/ADS/week1.md
       - "Week2": Courses/ADS/week2.md
+      - "Week3": Courses/ADS/week3.md
     - 计组: Courses/Computer_Organization/index.md
     - DB: Courses/DataBaseSystem/index.md
 markdown_extensions:
