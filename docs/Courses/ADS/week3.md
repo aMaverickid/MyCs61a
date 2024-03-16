@@ -50,7 +50,7 @@
         对于 Relenvance, 可以用Precision和Recall来衡量
         - Precision: 找到的文档中，有多少是相关的
         - Recall: 所有相关的文档中，找到了多少 
-
+        ![alt text](image-22.png)
 
 
 
