@@ -12,6 +12,7 @@ nav:
       - "Week2": Courses/ADS/week2.md
       - "Week3": Courses/ADS/week3.md
     - 计组: Courses/Computer_Organization/index.md
+          - "Chapter3": Courses/Computer_Organization/Chapter3.md
     - DB: Courses/DataBaseSystem/index.md
 markdown_extensions:
   - admonition #MkDocs 警告框
