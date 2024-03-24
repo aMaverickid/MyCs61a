@@ -41,4 +41,47 @@
     !!! Extended 1 bit ALU -- Substraction
     ![alt text](image-6.png)
     !!! Extended 1 bit ALU -- comparison
+
 #### 浮点数运算
+
+##### 浮点数的表示
+
+> sign, significand (significant digit), exponent
+
+> More bits for significand: more accuracy
+>
+> More bits for exponent: increases the range
+
+![image-20240324154412821](C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20240324154412821.png)
+
+那么各部分的值怎么计算呢？
+
+![image-20240324154518593](C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20240324154518593.png)
+
+注意 significand 有 hidden 1，exponent 有 bias
+
+Example：
+
+![image-20240324154624732](C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20240324154624732.png)
+
+那么浮点数表示的范围和精度如何？
+
+![image-20240324154859773](C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20240324154859773.png)
+
+![image-20240324154911626](C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20240324154911626.png)
+
+注意 exponents 0000...00 and 1111...11 reserved
+
+![image-20240324155018492](C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20240324155018492.png)
+
+上图用十进制小数点后几位 表示精度
+
+![image-20240324155504622](C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20240324155504622.png)
+
+##### Addtion
+
+![image-20240324170247313](C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20240324170247313.png)
+
+**注意 按照以下4步**
+
+![image-20240324170642107](C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20240324170642107.png)
