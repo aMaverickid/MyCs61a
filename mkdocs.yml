@@ -12,8 +12,9 @@ nav:
       - "Week2": Courses/ADS/week2.md
       - "Week3": Courses/ADS/week3.md
       - "Week4": Courses/ADS/week4.md
+      - "Week5": Courses/ADS/week5.md
     - 计组: 
-          - Courses/Computer_Organization/index.md
+          - "intro": Courses/Computer_Organization/index.md
           - "Chapter3": Courses/Computer_Organization/Chapter3.md
     - DB: Courses/DataBaseSystem/index.md
     - C++: Courses/C++/Memory Model in C++.md

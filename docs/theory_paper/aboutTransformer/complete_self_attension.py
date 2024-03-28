@@ -62,10 +62,10 @@ class SelfAttention(nn.Module):
 
         out = self.unifyheads(out)
         
-        print('out =', out)
+        # print('out =', out)
 
-t, k = 3, 2
-mymodel = SelfAttention(k, heads=2)
-x = torch.randn(2, t, k)
-mymodel.forward(x)
+# t, k = 3, 2
+# mymodel = SelfAttention(k, heads=2)
+# x = torch.randn(2, t, k)
+# mymodel.forward(x)
 
