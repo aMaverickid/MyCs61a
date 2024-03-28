@@ -170,7 +170,7 @@ class TransformerBlock(nn.Module):
 
 
 
-
+![image-20240326165411387](C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20240326165411387.png)
 
 
 
