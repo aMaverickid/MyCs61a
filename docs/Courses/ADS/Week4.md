@@ -27,3 +27,10 @@ struct LeftistHeapNode {
     Wikipedia:[https://en.wikipedia.org/wiki/Skew_heap](https://en.wikipedia.org/wiki/Skew_heap)
 思路，依然先维护堆的性质，但这次每次合并操作之后，**无条件地交换左右子树**，这样我们就不需要在回溯的时候才进行左右子树的交换。
 ## Amortized Analysis for Skew Heaps
+![alt text](image-38.png)
+> potential function要能分辨出bad luck和good luck。
+> Right node的数量只能体现bad luck，但没有变好的可能。
+> 所以提出了新定义 **heavy node**，它的数量越多，说明整个树越不满足“左偏”的性质，越坏。
+
+
+![alt text](image-39.png)

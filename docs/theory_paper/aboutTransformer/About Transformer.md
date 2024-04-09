@@ -169,10 +169,11 @@ class TransformerBlock(nn.Module):
 **For the sake of simplicity, we'll use position embeddings in our implementation**
 
 
+### Text-generate Transformers
 
-![image-20240326165411387](C:\Users\86198\AppData\Roaming\Typora\typora-user-images\image-20240326165411387.png)
+### Local-Global Context Aware Transformer for Language-Guided Video Segmentation
 
-
+![alt text](image.png)
 
 
 
