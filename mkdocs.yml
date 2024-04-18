@@ -13,10 +13,17 @@ nav:
       - "Week3": Courses/ADS/week3.md
       - "Week4": Courses/ADS/week4.md
       - "Week5": Courses/ADS/week5.md
+      - "Week6": Courses/ADS/week6.md
+      - "Week7": Courses/ADS/week7.md
+      - "Week8": Courses/ADS/week8.md
     - 计组: 
           - "intro": Courses/Computer_Organization/index.md
+          - "Chapter2": Courses/Computer_Organization/Chapter2.md
           - "Chapter3": Courses/Computer_Organization/Chapter3.md
+          - "Exception": Courses/Computer_Organization/Exception.md
+
     - DB: Courses/DataBaseSystem/index.md
+          - "Lecture5": Courses/DataBaseSystem/Lecture5.md
     - C++: Courses/C++/Memory Model in C++.md
   - Other:
       - "About Transformer": theory_paper/aboutTransformer/About Transformer.md
