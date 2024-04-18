@@ -18,6 +18,7 @@
 !!! note 各步骤实现
     !!! note "**Token Analyzer & Stop Filter**"
         - Token Analyzer: 词法分析器，将文本分割成单词
+        - Word Stemming: 将输入文本中的 'says' 'said', 'saying' 都 当成 'say', 所以能提升召回率 recall，但减少了precision
         - Stop Filter: 去除停用词，如“a”，“the”等
         ![alt text](image-16.png)
     !!! note "**Vocabulary Scanner**"
