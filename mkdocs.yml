@@ -22,7 +22,7 @@ nav:
           - "Chapter3": Courses/Computer_Organization/Chapter3.md
           - "Exception": Courses/Computer_Organization/Exception.md
 
-    - DB: Courses/DataBaseSystem/index.md
+    - DB: - "intro": Courses/DataBaseSystem/index.md
           - "Lecture5": Courses/DataBaseSystem/Lecture5.md
     - C++: Courses/C++/Memory Model in C++.md
   - Other:
