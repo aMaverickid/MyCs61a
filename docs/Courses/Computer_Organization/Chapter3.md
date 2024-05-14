@@ -3,11 +3,12 @@
 
 ### Numbers Representations
 !!! note
-    整数：
+    数：
     - unsigned
     - signed
-    - one's complement: n-bits ---> $[-2^{n-1}-1, 2^{n-1}-1]$
-    - two's complement: n-bits ---> $[-2^{n-1}, 2^{n-1}-1]$
+      - One's complement: n-bits ---> $[-(2^{n-1}-1), 2^{n-1}-1]$
+      - Two's complement: n-bits ---> $[-2^{n-1}, 2^{n-1}-1]$
+      - sign Magnitude: n-bits ---> $[-(2^{n-1}-1), 2^{n-1}-1]$
 
 ### Arithmetic
 #### 整数运算

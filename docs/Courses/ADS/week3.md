@@ -44,7 +44,7 @@
     对于Query的处理，可以设置阈值，只返回频率大于阈值的term, 优先处理频率小的term
     - Measure for a search engine
     ![alt text](image-21.png)
-    ***注意 Data Retrieval 和 Information Retrieval**有不同的目标和衡量标准
+    ***注意 Data Retrieval 和 Information Retrieval**有不同的目标和衡量标准:
     Data Retrieval仅是找到包含term的文档，而Information Retrieval是找到relevant的文档*
 
     !!! note 
